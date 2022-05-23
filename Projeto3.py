@@ -6,9 +6,10 @@ class Calculadora:
 
     def __init__(self, matriz):
         self._matriz = matriz
-        self._coordenadas = self.lista_coordenadas(matriz)
-        self._lista_rios = []
-        self._visitados = []
+        self._coordenadas = self.lista_coordenadas(
+            matriz)  # Lista com as coordenadas dos rios
+        self._lista_rios = []  # Lista para armazenar os tamanhos dos rios encontrados
+        self._visitados = []  # Lista para registrar quais coordenadas ja foram visitadas
 
         self.calcula_rios(self._coordenadas[0], True)
         self.__str__()
